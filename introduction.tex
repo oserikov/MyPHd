@@ -1,0 +1,48 @@
+\chapter{Introduction}
+\label{ch:intro:introduction}
+
+This is the introduction chapter.
+This is fill text to fill up a page.
+This is fill text \ref{fig:my_cool_chart} to fill up a page.
+This is fill text to fill up a page.
+This is fill text to fill up a page.
+
+
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}
+  
+
+  \begin{axis}[
+    xlabel=$A$,
+    ylabel=$B$,
+  ]
+    \addplot[only marks, mark=x]
+    coordinates{ % plot 1 data set
+      (0.31,0.28)
+      (0.24,0.50)
+      (0.52,0.1)
+      % more points...
+    }; \label{plot_one}
+    
+    \addplot[only marks, mark=o]
+    coordinates{ % plot 2 data set
+      (0.31,0.8)
+      (0.24,0.15)
+      (0.52,0.24)
+      % more points...
+    }; \label{plot_two}
+
+    % plot 1 legend entry
+    \addlegendimage{/pgfplots/refstyle=plot_one}
+    \addlegendentry{plot 1}
+    \addlegendimage{/pgfplots/refstyle=plot_two}
+    \addlegendentry{plot 2}
+  \end{axis}
+  
+
+\end{tikzpicture}
+
+  \caption{Here's my chart \label{fig:my_cool_chart}}
+
+\end{figure}
